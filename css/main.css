@@ -1,0 +1,279 @@
+html {
+  height: 100%;
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Aldrich', sans-serif;
+  /*font-family: 'Electrolize', sans-serif;*/
+  /*font-family: 'Geo', sans-serif;*/
+  /*font-family: 'Iceland', sans-serif;*/
+  /*font-family: 'Sarpanch', sans-serif;*/
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav - BEGIN */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  z-index: 1;
+}
+
+/* simple sticky nav - BEGIN */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+.nav-link a {
+  text-decoration: none;
+  color: black;
+}
+/* simple sticky nav - END */
+
+/*!* dynamic sticky nav - BEGIN *!*/
+/*.nav-link a {*/
+  /*text-decoration: none;*/
+  /*color: white;*/
+/*}*/
+/*.nav-link a.a-text {*/
+  /*color: black;*/
+/*}*/
+/*.nav-link a:hover {*/
+  /*text-decoration: underline;*/
+  /*cursor: pointer;*/
+/*}*/
+/*.sticky {*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*width: 100%;*/
+  /*background-color: white;*/
+/*}*/
+/*!* dynamic sticky nav - END *!*/
+
+.nav-home-wrapper {
+  font-size: 24px;
+  margin-left: 20px;
+}
+.nav-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link {
+  padding: 10px;
+  margin-right: 20px;
+}
+.nav-link a:hover {
+text-decoration: underline;
+cursor: pointer;
+}
+/* nav - END */
+
+/* splash - BEGIN */
+#splash {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/bg_04_02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-top: -50 for dynamic sticky nav */
+  /*margin-top: -50px;*/
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+/* bg_04_02.png - begin */
+.name {
+  text-align: center;
+  font-size: 70px;
+  padding-top: 10%;
+  letter-spacing: 10px;
+  color: white;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: white;
+}
+.tag-line-wrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 55%;
+  font-size: 30px;
+  color: white;
+}
+/* bg_04_02.png - end */
+/* splash - END */
+
+/* common - BEGIN */
+.header {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+hr {
+  width: 80%;
+  height: 3px;
+  border: none;
+  color: #ccc;
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* common - END */
+
+/* about - BEGIN */
+#about {
+  height: 500px;
+}
+/* about - END */
+
+/* projects - BEGIN */
+#projects .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projects article {
+  margin-bottom: 30px;
+}
+#projects img {
+  display: block;
+}
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* CSS - production */
+/*.card .overlay {*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*display: none;*/
+  /*color: #FFF;*/
+  /*padding: 20px;*/
+/*}*/
+/*.card:hover .overlay {*/
+  /*display: block;*/
+  /*background: rgba(0, 0, 0, .65);*/
+/*}*/
+
+/* CSS for dev */
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*display: none;*/
+  /*font-family: 'Geo', sans-serif;*/
+  color: #FFF;
+  padding: 20px;
+  background: rgba(0, 0, 0, .65);
+}
+.overlay .content {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+.text-span {
+  animation: blink .5s step-end infinite;
+}
+.challenge-wrapper {
+  margin-bottom: 10px;
+}
+.why-wrapper {
+  margin-bottom: 10px;
+}
+.stack-wrapper {
+  margin-bottom: 10px;
+}
+.overlay h3,
+.overlay ul,
+.overlay p {
+  margin: 0;
+}
+.overlay p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-left: 10px;
+}
+.fa-check {
+  /*color: green;*/
+  color: lawngreen;
+}
+.overlay .links {
+  position: absolute;
+  bottom: 8%;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+.overlay a {
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  margin-right: 10px;
+}
+.overlay a:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  /*background-color: white;*/
+  background-color: limegreen;
+}
+
+
+
+/* projects - END */
+
+/* connect - BEGIN */
+#connect .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+#connect .icons-wrapper {
+  display: flex;
+}
+#connect .icon-wrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#connect .icon {
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+  transition: transform 0.4s ease;
+}
+#connect .icon:hover {
+  transform: scale(1.15, 1.15);
+}
+#connect .icon.github:hover {
+  color: #4078c0;
+}
+#connect .icon.linkedin:hover {
+  color: #0077B5;
+}
+#connect .icon.email:hover {
+  /*color: #F5BE4E;*/
+  color: #F4A73B;
+}
+/* connect - END */
