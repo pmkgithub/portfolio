@@ -1,7 +1,7 @@
 $(function() {
 
   /////////////////////////////////////////////////////////////////////////////
-  // scroll logic - BEGIN
+  // nav scroll logic - BEGIN
   /////////////////////////////////////////////////////////////////////////////
   const scrollTo = (e) => {
     e.preventDefault();
@@ -12,11 +12,44 @@ $(function() {
     return false;
   };
   /////////////////////////////////////////////////////////////////////////////
-  // scroll logic - END
+  // nav scroll logic - END
   /////////////////////////////////////////////////////////////////////////////
 
+
   /////////////////////////////////////////////////////////////////////////////
-  // typing logic - BEGIN
+  // About Section logic - BEGIN
+  /////////////////////////////////////////////////////////////////////////////
+  let isAboutVisible = false;
+
+  $(window).scroll(function() {
+    var hT = $('#about').offset().top,
+      hH = $('#about').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+
+    if ( !isAboutVisible ) {
+      if ( hT/2 <= wS ) {
+        // After first time About Section scroll into view,
+        // don't animate again.
+        isAboutVisible = true;
+
+        aboutChildren.each( (index, child) => {
+          let t = setTimeout(function() {
+            console.log('child ', child);
+            let style = index % 2 === 0 ? { left: '10%' } : { left: '-5%' };
+            $(child).animate(style, 3000, 'swing')
+          }, 3000 * index + 1);
+        })
+      }
+    }
+  });
+  /////////////////////////////////////////////////////////////////////////////
+  // About Section logic - END
+  /////////////////////////////////////////////////////////////////////////////
+
+
+  /////////////////////////////////////////////////////////////////////////////
+  // Project Section typing logic - BEGIN
   /////////////////////////////////////////////////////////////////////////////
   let isTypingCard1 = false;
   let isTypingCard2 = false;
@@ -91,11 +124,12 @@ $(function() {
 
   };
   /////////////////////////////////////////////////////////////////////////////
-  // typing logic - END
+  // Projects Section typing logic - END
   /////////////////////////////////////////////////////////////////////////////
 
-  // Handlers
+  // Handlers & const
   $('.nav-link a').on('click', (e) => {scrollTo(e)});
   $('.card').on('mouseenter', (e) => {typeText(e)});
+  const aboutChildren = $('#about .content-wrapper').children();
 
 });
