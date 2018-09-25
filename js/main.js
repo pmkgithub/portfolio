@@ -21,25 +21,33 @@ $(function() {
   /////////////////////////////////////////////////////////////////////////////
   let isAboutVisible = false;
 
-  $(window).scroll(function() {
-    var hT = $('#about').offset().top,
-      hH = $('#about').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
+  $(window).scroll(() => {
+    let sectionTop = $('#about').offset().top,
+        windowScrollTop = $(this).scrollTop();
 
+    // sectionTop/2 - kickoff when section in middle of Window.
+    // sectionTop/8 = kickoff when section is just scrolling into Window, etc.
     if ( !isAboutVisible ) {
-      if ( hT/2 <= wS ) {
-        // After first time About Section scroll into view,
+      if ( sectionTop/8 <= windowScrollTop ) {
+        // After first time About Section scrolls into view,
         // don't animate again.
         isAboutVisible = true;
 
+        // Get the first elem out sooner.
+        $(aboutChildren[0]).animate({'left': '10%'}, 3000, 'swing');
+
+        // Animate the other elems.
         aboutChildren.each( (index, child) => {
-          let t = setTimeout(function() {
-            console.log('child ', child);
+          // Skip the first elem, handled above.
+          if ( index === 0 ) {return}
+
+          let t = setTimeout(() => {
             let style = index % 2 === 0 ? { left: '10%' } : { left: '-5%' };
-            $(child).animate(style, 3000, 'swing')
-          }, 3000 * index + 1);
-        })
+            $(child).animate(style, 3000, 'swing');
+          }, 2000 * index);
+
+        });
+
       }
     }
   });
