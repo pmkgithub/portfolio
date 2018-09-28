@@ -140,8 +140,18 @@ cursor: pointer;
   display: block;
   height: 100%;
   width: 100%;
-  background-image: url("../img/bg_320.png");
+
+  /*background-image: url("../img/test_01.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+
+  background-image: url("../img/test_04.png");
   background-repeat: no-repeat;
+  background-position: center;
+  /*background-attachment: fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   /* margin-top: -50 for dynamic sticky nav */
   /*margin-top: -50px;*/
@@ -150,8 +160,8 @@ cursor: pointer;
 }
 .name {
   text-align: center;
-  font-size: 22px;
-  padding-top: 20%;
+  font-size: 24px;
+  padding-top: 25%;
   letter-spacing: 5px;
   color: white;
 }
@@ -171,13 +181,13 @@ cursor: pointer;
 
 /* Small (phone - landscape) */
 @media screen and ( min-width: 576px ) {
-  #splash {
-    background-image: url("../img/bg_576.png");
-  }
+  /*#splash {*/
+    /*background-image: url("../img/bg_576.png");*/
+  /*}*/
   .name {
     font-size: 40px;
     letter-spacing: 10px;
-    padding-top: 10%;
+    padding-top: 15%;
   }
   .title {
     font-size: 17px;
@@ -194,13 +204,13 @@ cursor: pointer;
 
 /* Medium (tablet) */
 @media screen and ( min-width: 768px ) {
-  #splash {
-    background-image: url("../img/bg_768.png");
-  }
+  /*#splash {*/
+    /*background-image: url("../img/bg_768.png");*/
+  /*}*/
   .name {
     font-size: 54px;
     letter-spacing: 10px;
-    padding-top: 10%;
+    padding-top: 15%;
   }
   .title {
     font-size: 23px;
@@ -217,9 +227,9 @@ cursor: pointer;
 
 /* Large (laptop), Extra Large (desktop) */
 @media screen and ( min-width: 992px ) {
-  #splash {
-    background-image: url("../img/bg_1600.png");
-  }
+  /*#splash {*/
+    /*background-image: url("../img/bg_1600.png");*/
+  /*}*/
   .name {
     font-size: 70px;
     letter-spacing: 10px;
@@ -232,7 +242,7 @@ cursor: pointer;
   .tag-line-wrapper {
     position: absolute;
     bottom: 5%;
-    left: 55%;
+    left: 50%;
     font-size: 30px;
   }
 
@@ -240,6 +250,110 @@ cursor: pointer;
 /*****************************************************************************/
 /* splash - END */
 /*****************************************************************************/
+
+/*!*****************************************************************************!*/
+/*!* about - BEGIN *!*/
+/*!*****************************************************************************!*/
+/*!* Extra Small *!*/
+/*#about {*/
+  /*font-family: 'Roboto', sans-serif;*/
+  /*font-size: 16px;*/
+/*}*/
+/*#about .content-wrapper {*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+/*}*/
+/*#about .about-item {*/
+  /*margin-bottom: 20px;*/
+/*}*/
+/*#about .about-item.even {*/
+  /*!* position needed for .animate() *!*/
+  /*position: relative;*/
+  /*right: -2000px;*/
+
+  /*display: flex;*/
+  /*justify-content: flex-start;*/
+/*}*/
+/*#about .about-item.odd {*/
+  /*!* position needed for .animate() *!*/
+  /*position: relative;*/
+  /*left: -2000px;*/
+
+  /*display: flex;*/
+  /*justify-content: flex-end;*/
+  /*margin-right: 5%;*/
+/*}*/
+/*#about .about-item span {*/
+  /*display: inline-block;*/
+  /*line-height: 20px;*/
+  /*vertical-align: top;*/
+/*}*/
+/*#about .about-item.even span {*/
+  /*margin-left: 10px;*/
+/*}*/
+/*#about .about-item.odd span{*/
+  /*margin-right: 10px;*/
+/*}*/
+/*#about img {*/
+  /*height: 20px;*/
+/*}*/
+
+/*!* Small (phone - landscape) *!*/
+/*@media screen and ( min-width: 576px ) {*/
+  /*#about {*/
+    /*font-size: 20px;*/
+  /*}*/
+  /*#about .about-item span {*/
+    /*line-height: 30px;*/
+  /*}*/
+  /*#about img {*/
+    /*height: 30px;*/
+  /*}*/
+/*}*/
+
+/*!* Medium (tablet) *!*/
+/*@media screen and ( min-width: 768px ) {*/
+  /*#about {*/
+    /*font-size: 24px;*/
+  /*}*/
+  /*#about .about-item span {*/
+    /*line-height: 36px;*/
+  /*}*/
+  /*#about img {*/
+    /*height: 36px;*/
+  /*}*/
+/*}*/
+
+/*!* Large (laptop) *!*/
+/*@media screen and ( min-width: 992px ) {*/
+  /*#about {*/
+    /*font-size: 26px;*/
+  /*}*/
+  /*#about .about-item span {*/
+    /*line-height: 40px;*/
+  /*}*/
+  /*#about img {*/
+    /*height: 40px;*/
+  /*}*/
+/*}*/
+
+/*!*!* Extra Large (desktop) *!*!*/
+/*!*@media screen and ( min-width: 1200px ) {*!*/
+  /*!*#about {*!*/
+    /*!*font-size: 26px;*!*/
+  /*!*}*!*/
+  /*!*#about .about-item span {*!*/
+    /*!*line-height: 40px;*!*/
+  /*!*}*!*/
+  /*!*#about img {*!*/
+    /*!*height: 40px;*!*/
+  /*!*}*!*/
+/*!*}*!*/
+/*!*****************************************************************************!*/
+/*!* about - END *!*/
+/*!*****************************************************************************!*/
+
+
 
 /*****************************************************************************/
 /* about - BEGIN */
@@ -257,17 +371,17 @@ cursor: pointer;
   margin-bottom: 20px;
 }
 #about .about-item.even {
-  /* position needed for .animate() */
-  position: relative;
-  right: -2000px;
+  /*!* position needed for .animate() *!*/
+  /*position: relative;*/
+  /*right: -2000px;*/
 
   display: flex;
   justify-content: flex-start;
 }
 #about .about-item.odd {
-  /* position needed for .animate() */
-  position: relative;
-  left: -2000px;
+  /*!* position needed for .animate() *!*/
+  /*position: relative;*/
+  /*left: -2000px;*/
 
   display: flex;
   justify-content: flex-end;
@@ -329,19 +443,22 @@ cursor: pointer;
 
 /*!* Extra Large (desktop) *!*/
 /*@media screen and ( min-width: 1200px ) {*/
-  /*#about {*/
-    /*font-size: 26px;*/
-  /*}*/
-  /*#about .about-item span {*/
-    /*line-height: 40px;*/
-  /*}*/
-  /*#about img {*/
-    /*height: 40px;*/
-  /*}*/
+/*#about {*/
+/*font-size: 26px;*/
+/*}*/
+/*#about .about-item span {*/
+/*line-height: 40px;*/
+/*}*/
+/*#about img {*/
+/*height: 40px;*/
+/*}*/
 /*}*/
 /*****************************************************************************/
 /* about - END */
 /*****************************************************************************/
+
+
+
 
 /*****************************************************************************/
 /* projects - BEGIN */

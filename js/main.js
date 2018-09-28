@@ -5,6 +5,7 @@ $(function() {
   /////////////////////////////////////////////////////////////////////////////
   const scrollTo = (e) => {
     e.preventDefault();
+    console.log('e.currentTarget.hash = ', e.currentTarget.hash);
     const target = e.currentTarget.hash;
     $('html, body').animate({
       scrollTop: ($(target).offset().top) - 50
