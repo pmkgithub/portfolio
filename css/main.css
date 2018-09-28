@@ -369,23 +369,20 @@ cursor: pointer;
 }
 #about .about-item {
   margin-bottom: 20px;
+  visibility: hidden;
+}
+#about .about-item.visible {
+  visibility: visible;
 }
 #about .about-item.even {
-  /*!* position needed for .animate() *!*/
-  /*position: relative;*/
-  /*right: -2000px;*/
-
   display: flex;
   justify-content: flex-start;
+  margin-left: 10%;
 }
 #about .about-item.odd {
-  /*!* position needed for .animate() *!*/
-  /*position: relative;*/
-  /*left: -2000px;*/
-
   display: flex;
   justify-content: flex-end;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 #about .about-item span {
   display: inline-block;
