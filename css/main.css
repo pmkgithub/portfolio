@@ -1,8 +1,6 @@
 html {
   height: 100%;
   font-family: 'Aldrich', sans-serif;
-  /*font-family: 'Iceland', sans-serif;*/
-  /*font-family: 'Sarpanch', sans-serif;*/
 }
 * {
   box-sizing: border-box;
@@ -12,58 +10,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-/*****************************************************************************/
-/* Common - BEGIN */
-/*****************************************************************************/
-.header {
-  font-size: 24px;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
-/* Extra Small */
-
-/* Small (phone - landscape) */
-@media screen and ( min-width: 576px ) {
-  .header {
-    font-size: 28px;
-  }
-}
-
-/* Medium (tablet) */
-@media screen and ( min-width: 768px ) {
-  .header {
-    font-size: 30px;
-  }
-}
-
-/* Large (laptop) */
-@media screen and ( min-width: 992px ) {
-  .header {
-    font-size: 36px;
-  }
-}
-
-/* Extra Large (desktop) */
-@media screen and ( min-width: 1200px ) {
-  .header {
-    font-size: 36px;
-  }
-}
-
-hr {
-  width: 80%;
-  height: 3px;
-  border: none;
-  color: #ccc;
-  background-color: #ccc;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-/*****************************************************************************/
-/* Common - END */
-/*****************************************************************************/
 
 /*****************************************************************************/
 /* Nav - BEGIN */
@@ -131,6 +77,59 @@ hr {
 /*****************************************************************************/
 /* Nav - END */
 /*****************************************************************************/
+
+
+/*****************************************************************************/
+/* Headers - BEGIN */
+/*****************************************************************************/
+/* Extra Small */
+.header {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+/* Small (phone - landscape) */
+@media screen and ( min-width: 576px ) {
+  .header {
+    font-size: 28px;
+  }
+}
+
+/* Medium (tablet) */
+@media screen and ( min-width: 768px ) {
+  .header {
+    font-size: 30px;
+  }
+}
+
+/* Large (laptop) */
+@media screen and ( min-width: 992px ) {
+  .header {
+    font-size: 36px;
+  }
+}
+
+/* Extra Large (desktop) */
+@media screen and ( min-width: 1200px ) {
+  .header {
+    font-size: 36px;
+  }
+}
+
+hr {
+  width: 80%;
+  height: 3px;
+  border: none;
+  color: #ccc;
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/*****************************************************************************/
+/* Headers - END */
+/*****************************************************************************/
+
 
 /*****************************************************************************/
 /* Splash - BEGIN */
@@ -403,7 +402,6 @@ hr {
 }
 /* Extra Small - END */
 
-
 /* Small (phone - landscape) */
 @media screen and ( min-width: 576px ) {
 
@@ -535,6 +533,7 @@ hr {
 /*****************************************************************************/
 /* Projects - END */
 /*****************************************************************************/
+
 
 /*****************************************************************************/
 /* Connect - BEGIN */
