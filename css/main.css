@@ -14,7 +14,7 @@ body {
 }
 
 /*****************************************************************************/
-/* common - BEGIN */
+/* Common - BEGIN */
 /*****************************************************************************/
 .header {
   font-size: 24px;
@@ -62,11 +62,11 @@ hr {
   margin-bottom: 20px;
 }
 /*****************************************************************************/
-/* common - END */
+/* Common - END */
 /*****************************************************************************/
 
 /*****************************************************************************/
-/* nav - BEGIN */
+/* Nav - BEGIN */
 /*****************************************************************************/
 .nav {
   display: flex;
@@ -74,8 +74,6 @@ hr {
   height: 50px;
   z-index: 1;
 }
-
-/* simple sticky nav - BEGIN */
 .sticky {
   position: fixed;
   top: 0;
@@ -86,36 +84,36 @@ hr {
   text-decoration: none;
   color: black;
 }
-/* simple sticky nav - END */
-
-.nav-link {
-  padding: 10px;
-  margin-right: 20px;
-}
 .nav-link a:hover {
-text-decoration: underline;
-cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Extra Small */
 .nav-home-wrapper {
+  display: flex;
+  align-items: center;
   font-size: 14px;
-  margin-left: 20px;
 }
 .nav-links-wrapper {
-  font-size: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.nav-link {
+  padding: 10px;
 }
 
 /* Small (phone - landscape) */
 @media screen and ( min-width: 576px ) {
   .nav-home-wrapper {
     font-size: 20px;
+    margin-left: 10px;
   }
   .nav-links-wrapper {
     font-size: 14px;
+    margin-right: 10px;
   }
 }
 
@@ -123,61 +121,64 @@ cursor: pointer;
 @media screen and ( min-width: 768px ) {
   .nav-home-wrapper {
     font-size: 24px;
+    margin-left: 20px;
   }
   .nav-links-wrapper {
     font-size: 18px;
+    margin-right: 20px;
   }
 }
 /*****************************************************************************/
-/* nav - END */
+/* Nav - END */
 /*****************************************************************************/
 
 /*****************************************************************************/
-/* splash - BEGIN */
+/* Splash - BEGIN */
 /*****************************************************************************/
-/* Extra Small */
 #splash {
   display: block;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background-image: url("../img/bg_320.png");
+
+  background-image: url("../img/splash_bg.png");
   background-repeat: no-repeat;
+  background-position: center;
+  /*background-attachment: fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  /* margin-top: -50 for dynamic sticky nav */
-  /*margin-top: -50px;*/
   margin-bottom: 40px;
   padding: 0;
 }
+/* Extra Small */
 .name {
   text-align: center;
-  font-size: 22px;
-  padding-top: 20%;
+  font-size: 30px;
+  padding-top: 30%;
   letter-spacing: 5px;
   color: white;
 }
 .title {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 5px;
   color: white;
 }
 .tag-line-wrapper {
   position: absolute;
   bottom: 5%;
-  left: 50%;
-  font-size: 12px;
+  left: 22%;
+  font-size: 14px;
   color: white;
 }
 
 /* Small (phone - landscape) */
 @media screen and ( min-width: 576px ) {
-  #splash {
-    background-image: url("../img/bg_576.png");
-  }
   .name {
     font-size: 40px;
     letter-spacing: 10px;
-    padding-top: 10%;
+    padding-top: 15%;
   }
   .title {
     font-size: 17px;
@@ -187,20 +188,17 @@ cursor: pointer;
   .tag-line-wrapper {
     position: absolute;
     bottom: 5%;
-    left: 55%;
+    left: 50%;
     font-size: 17px;
   }
 }
 
 /* Medium (tablet) */
 @media screen and ( min-width: 768px ) {
-  #splash {
-    background-image: url("../img/bg_768.png");
-  }
   .name {
     font-size: 54px;
     letter-spacing: 10px;
-    padding-top: 10%;
+    padding-top: 15%;
   }
   .title {
     font-size: 23px;
@@ -209,17 +207,13 @@ cursor: pointer;
   .tag-line-wrapper {
     position: absolute;
     bottom: 5%;
-    left: 55%;
+    left: 50%;
     font-size: 23px;
   }
 }
 
-
 /* Large (laptop), Extra Large (desktop) */
 @media screen and ( min-width: 992px ) {
-  #splash {
-    background-image: url("../img/bg_1600.png");
-  }
   .name {
     font-size: 70px;
     letter-spacing: 10px;
@@ -232,22 +226,23 @@ cursor: pointer;
   .tag-line-wrapper {
     position: absolute;
     bottom: 5%;
-    left: 55%;
+    left: 50%;
     font-size: 30px;
   }
 
 }
 /*****************************************************************************/
-/* splash - END */
+/* Splash - END */
 /*****************************************************************************/
 
+
 /*****************************************************************************/
-/* about - BEGIN */
+/* About - BEGIN */
 /*****************************************************************************/
 /* Extra Small */
 #about {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 #about .content-wrapper {
   display: flex;
@@ -255,23 +250,20 @@ cursor: pointer;
 }
 #about .about-item {
   margin-bottom: 20px;
+  visibility: hidden;
+}
+#about .about-item.visible {
+  visibility: visible;
 }
 #about .about-item.even {
-  /* position needed for .animate() */
-  position: relative;
-  right: -2000px;
-
   display: flex;
   justify-content: flex-start;
+  margin-left: 10%;
 }
 #about .about-item.odd {
-  /* position needed for .animate() */
-  position: relative;
-  left: -2000px;
-
   display: flex;
   justify-content: flex-end;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 #about .about-item span {
   display: inline-block;
@@ -327,24 +319,13 @@ cursor: pointer;
   }
 }
 
-/*!* Extra Large (desktop) *!*/
-/*@media screen and ( min-width: 1200px ) {*/
-  /*#about {*/
-    /*font-size: 26px;*/
-  /*}*/
-  /*#about .about-item span {*/
-    /*line-height: 40px;*/
-  /*}*/
-  /*#about img {*/
-    /*height: 40px;*/
-  /*}*/
-/*}*/
 /*****************************************************************************/
-/* about - END */
+/* About - END */
 /*****************************************************************************/
 
+
 /*****************************************************************************/
-/* projects - BEGIN */
+/* Projects - BEGIN */
 /*****************************************************************************/
 #projects .content-wrapper {
   display: flex;
@@ -376,20 +357,6 @@ cursor: pointer;
 }
 /* overlay - production - END */
 
-/*!* overlay for dev - BEGIN *!*/
-/*.card .overlay {*/
-  /*position: absolute;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*width: 100%;*/
-  /*height: 100%;*/
-  /*!*display: none;*!*/
-  /*!*font-family: 'Geo', sans-serif;*!*/
-  /*color: #FFF;*/
-  /*padding: 20px;*/
-  /*background: rgba(0, 0, 0, .65);*/
-/*}*/
-/* overlay for dev - END */
 .overlay .content {
   display: flex;
   flex-direction: column;
@@ -566,11 +533,11 @@ cursor: pointer;
   }
 }
 /*****************************************************************************/
-/* projects - END */
+/* Projects - END */
 /*****************************************************************************/
 
 /*****************************************************************************/
-/* connect - BEGIN */
+/* Connect - BEGIN */
 /*****************************************************************************/
 #connect .content-wrapper {
   display: flex;
@@ -605,5 +572,5 @@ cursor: pointer;
   color: #F4A73B;
 }
 /*****************************************************************************/
-/* connect - END */
+/* Connect - END */
 /*****************************************************************************/

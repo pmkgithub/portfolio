@@ -1,7 +1,7 @@
 $(function() {
 
   /////////////////////////////////////////////////////////////////////////////
-  // nav scroll logic - BEGIN
+  // Nav scroll logic - BEGIN
   /////////////////////////////////////////////////////////////////////////////
   const scrollTo = (e) => {
     e.preventDefault();
@@ -12,7 +12,7 @@ $(function() {
     return false;
   };
   /////////////////////////////////////////////////////////////////////////////
-  // nav scroll logic - END
+  // Nav scroll logic - END
   /////////////////////////////////////////////////////////////////////////////
 
 
@@ -23,7 +23,7 @@ $(function() {
 
   $(window).scroll(() => {
     let sectionTop = $('#about').offset().top,
-        windowScrollTop = $(this).scrollTop();
+      windowScrollTop = $(this).scrollTop();
 
     // sectionTop/2 - kickoff when section in middle of Window.
     // sectionTop/8 = kickoff when section is just scrolling into Window, etc.
@@ -34,7 +34,7 @@ $(function() {
         isAboutVisible = true;
 
         // Get the first elem out sooner.
-        $(aboutChildren[0]).animate({'left': '10%'}, 3000, 'swing');
+        $(aboutChildren[0]).addClass('animated zoomInRight visible');
 
         // Animate the other elems.
         aboutChildren.each( (index, child) => {
@@ -42,8 +42,8 @@ $(function() {
           if ( index === 0 ) {return}
 
           let t = setTimeout(() => {
-            let style = index % 2 === 0 ? { left: '10%' } : { left: '-5%' };
-            $(child).animate(style, 3000, 'swing');
+            let style = index % 2 === 0 ? 'animated zoomInRight visible' : 'animated zoomInLeft visible';
+            $(child).addClass(style);
           }, 2000 * index);
 
         });
