@@ -135,21 +135,12 @@ hr {
 /*****************************************************************************/
 /* Splash - BEGIN */
 /*****************************************************************************/
-/* Extra Small */
 #splash {
   display: block;
-  /*height: 100%;*/
+  height: 100vh;
   width: 100%;
 
-  height: 100vh;
-  /*height: 90vh;*/
-  /*height: 80:*/
-
-  /*background-image: url("../img/test_01.png");*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
-
-  background-image: url("../img/test_04.png");
+  background-image: url("../img/splash_bg.png");
   background-repeat: no-repeat;
   background-position: center;
   /*background-attachment: fixed;*/
@@ -157,37 +148,33 @@ hr {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* margin-top: -50 for dynamic sticky nav */
-  /*margin-top: -50px;*/
   margin-bottom: 40px;
   padding: 0;
 }
+/* Extra Small */
 .name {
   text-align: center;
-  font-size: 24px;
-  padding-top: 25%;
+  font-size: 30px;
+  padding-top: 30%;
   letter-spacing: 5px;
   color: white;
 }
 .title {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 5px;
   color: white;
 }
 .tag-line-wrapper {
   position: absolute;
   bottom: 5%;
-  left: 50%;
-  font-size: 12px;
+  left: 22%;
+  font-size: 14px;
   color: white;
 }
 
 /* Small (phone - landscape) */
 @media screen and ( min-width: 576px ) {
-  /*#splash {*/
-    /*background-image: url("../img/bg_576.png");*/
-  /*}*/
   .name {
     font-size: 40px;
     letter-spacing: 10px;
@@ -201,16 +188,13 @@ hr {
   .tag-line-wrapper {
     position: absolute;
     bottom: 5%;
-    left: 55%;
+    left: 50%;
     font-size: 17px;
   }
 }
 
 /* Medium (tablet) */
 @media screen and ( min-width: 768px ) {
-  /*#splash {*/
-    /*background-image: url("../img/bg_768.png");*/
-  /*}*/
   .name {
     font-size: 54px;
     letter-spacing: 10px;
@@ -223,16 +207,13 @@ hr {
   .tag-line-wrapper {
     position: absolute;
     bottom: 5%;
-    left: 55%;
+    left: 50%;
     font-size: 23px;
   }
 }
 
 /* Large (laptop), Extra Large (desktop) */
 @media screen and ( min-width: 992px ) {
-  /*#splash {*/
-    /*background-image: url("../img/bg_1600.png");*/
-  /*}*/
   .name {
     font-size: 70px;
     letter-spacing: 10px;
