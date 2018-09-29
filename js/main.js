@@ -28,7 +28,7 @@ $(function() {
     // sectionTop/2 - kickoff when section in middle of Window.
     // sectionTop/8 = kickoff when section is just scrolling into Window, etc.
     if ( !isAboutVisible ) {
-      if ( sectionTop/8 <= windowScrollTop ) {
+      if ( sectionTop/2 <= windowScrollTop ) {
         // After first time About Section scrolls into view,
         // don't animate again.
         isAboutVisible = true;
