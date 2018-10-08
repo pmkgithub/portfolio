@@ -23,7 +23,7 @@ $(function() {
 
   $(window).scroll(() => {
     let sectionTop = $('#about').offset().top,
-      windowScrollTop = $(this).scrollTop();
+        windowScrollTop = $(this).scrollTop();
 
     // sectionTop/2 - kickoff when section in middle of Window.
     // sectionTop/8 = kickoff when section is just scrolling into Window, etc.
