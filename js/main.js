@@ -33,10 +33,10 @@ $(function() {
         // don't animate again.
         isAboutVisible = true;
 
-        // Get the first elem out sooner.
+        // Animate first elem sooner.
         $(aboutChildren[0]).addClass('animated zoomInRight visible');
 
-        // Animate the other elems.
+        // Animate the other elems on time delay.
         aboutChildren.each( (index, child) => {
           // Skip the first elem, handled above.
           if ( index === 0 ) {return}
